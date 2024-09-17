@@ -1,7 +1,5 @@
 package com.example.drone_dojo.exercise;
 
-import java.util.Arrays;
-
 public class DroneControl {
 
   private final Drone drone;
