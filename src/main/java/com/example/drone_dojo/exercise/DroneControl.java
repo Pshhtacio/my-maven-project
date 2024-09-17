@@ -11,16 +11,28 @@ public class DroneControl {
   }
 
   public void movement(String[] input) {
-
     for (String direction : input) {
       switch (direction) {
-        case "U" -> drone.moveUp();
-        case "D" -> drone.moveDown();
-        case "R" -> drone.moveRight();
-        case "L" -> drone.moveLeft();
-        case "F" -> drone.moveForward();
-        case "B" -> drone.moveBackward();
-        default -> throw new IllegalArgumentException("Invalid command");
+        case "U":
+          drone.moveUp();
+          break;
+        case "D":
+          drone.moveDown();
+          break;
+        case "R":
+          drone.moveRight();
+          break;
+        case "L":
+          drone.moveLeft();
+          break;
+        case "F":
+          drone.moveForward();
+          break;
+        case "B":
+          drone.moveBackward();
+          break;
+        default:
+          throw new IllegalArgumentException("Invalid command");
       }
     }
     System.out.println(drone.displayCoordinatesAndBatteryPercentage());
